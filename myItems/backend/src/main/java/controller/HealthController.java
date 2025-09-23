@@ -1,8 +1,6 @@
 package controller;
 
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
-import repository.ItemRepository;
 
 import java.util.Map;
 
@@ -10,13 +8,9 @@ import java.util.Map;
 @RequestMapping("/api")
 public class HealthController {
 
-    @Autowired
-    private ItemRepository itemRepository;
-
     @GetMapping("/health")
     public Map<String, String> health() {
         try {
-            itemRepository.count(); 
             return Map.of("status", "ok", "detail", "Conexión abierta");
         } catch (Exception e) {
             return Map.of("status", "error", "detail", "Sin conexión con la DB");

@@ -5,7 +5,6 @@ import java.time.Instant;
 import java.util.List;
 
 @Entity
-@Table(name = "items")
 public class CustomItem {
 
     @Id @GeneratedValue(strategy = GenerationType.IDENTITY)
