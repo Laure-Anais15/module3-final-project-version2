@@ -1,4 +1,4 @@
-package myitems.backend.model;
+package model;
 
 import jakarta.persistence.*;
 import java.time.Instant;
@@ -6,7 +6,7 @@ import java.util.List;
 
 @Entity
 @Table(name = "items")
-public class Item {
+public class CustomItem {
 
     @Id @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
@@ -25,10 +25,10 @@ public class Item {
     private Instant createdAt;
     private Instant updatedAt;
 
-    public Item() {}
+    public CustomItem() {}
 
     // for DataLoader
-    public Item(String title, String description, List<String> tags) {
+    public CustomItem(String title, String description, List<String> tags) {
         this.title = title;
         this.description = description;
         this.tags = tags;

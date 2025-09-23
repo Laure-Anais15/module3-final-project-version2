@@ -1,11 +1,9 @@
-package myitems.backend;
-
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class MyItemsApplication {
+public class MyItemsApp {
     public static void main(String[] args) {
-        SpringApplication.run(MyItemsApplication.class, args);
+        SpringApplication.run(MyItemsApp.class, args);
     }
 }

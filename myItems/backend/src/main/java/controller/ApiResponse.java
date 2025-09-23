@@ -1,4 +1,4 @@
-package myitems.backend.controller;
+package controller;
 
 import java.util.List;
 import java.util.Map;

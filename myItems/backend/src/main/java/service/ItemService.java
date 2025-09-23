@@ -1,10 +1,10 @@
-package myitems.backend.service;
+package service;
 
-import myitems.backend.model.Item;
-import myitems.backend.repository.ItemRepository;
+import model.CustomItem;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.*;
 import org.springframework.stereotype.Service;
+import repository.ItemRepository;
 
 import java.util.Optional;
 
@@ -14,13 +14,13 @@ public class ItemService {
     @Autowired
     private ItemRepository itemRepository;
 
-    public Page<Item> list(String search, int page, int pageSize) {
+    public Page<CustomItem> list(String search, int page, int pageSize) {
         Pageable pageable = PageRequest.of(page - 1, pageSize, Sort.by("createdAt").descending());
         if (search == null || search.isBlank()) return itemRepository.findAll(pageable);
         return itemRepository.search(search, pageable);
     }
 
-    public Item create(Item item) {
+    public CustomItem create(CustomItem item) {
         // validation minimal
         if (item.getTitle() == null || item.getTitle().isBlank()) {
             throw new IllegalArgumentException("title is required");
@@ -28,10 +28,10 @@ public class ItemService {
         return itemRepository.save(item);
     }
 
-    public Optional<Item> findById(Long id) { return itemRepository.findById(id); }
+    public Optional<CustomItem> findById(Long id) { return itemRepository.findById(id); }
 
-    public Item update(Long id, Item update) {
-        Item existing = itemRepository.findById(id).orElseThrow(() -> new RuntimeException("Not found"));
+    public CustomItem update(Long id, CustomItem update) {
+        CustomItem existing = itemRepository.findById(id).orElseThrow(() -> new RuntimeException("Not found"));
         if (update.getTitle() != null) existing.setTitle(update.getTitle());
         existing.setDescription(update.getDescription());
         existing.setTags(update.getTags());

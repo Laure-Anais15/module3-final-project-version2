@@ -1,8 +1,8 @@
-package myitems.backend.controller;
+package controller;
 
-import myitems.backend.repository.ItemRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
+import repository.ItemRepository;
 
 import java.util.Map;
 
