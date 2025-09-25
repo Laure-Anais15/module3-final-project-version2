@@ -6,6 +6,7 @@ export default function ItemEdit() {
   const navigate = useNavigate();
   const [title, setTitle] = useState("");
   const [description, setDescription] = useState("");
+  const [author, setAuthor] = useState("");
 
   // charger l’item pour pré-remplir le formulaire
   useEffect(() => {
@@ -13,6 +14,7 @@ export default function ItemEdit() {
       .then((res) => res.json())
       .then((data) => {
         setTitle(data.title);
+        setAuthor(data.author);
         setDescription(data.description);
       })
       .catch((err) => console.error("Error :", err));
@@ -23,7 +25,7 @@ export default function ItemEdit() {
     fetch(`http://localhost:8080/api/items/${id}`, {
       method: "PUT",
       headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({ title, description }),
+      body: JSON.stringify({ title, author, description }),
     })
       .then((res) => res.json())
       .then(() => {
@@ -35,13 +37,21 @@ export default function ItemEdit() {
 
   return (
     <div>
-      <h2>Edit Item</h2>
+      <h2>Edit a Book</h2>
       <form onSubmit={handleSubmit}>
         <div>
-          <label>Title : </label>
+          <label>Book title : </label>
           <input
             value={title}
             onChange={(e) => setTitle(e.target.value)}
+            required
+          />
+        </div>
+        <div>
+          <label>Author : </label>
+          <input
+            value={author}
+            onChange={(e) => setAuthor(e.target.value)}
             required
           />
         </div>

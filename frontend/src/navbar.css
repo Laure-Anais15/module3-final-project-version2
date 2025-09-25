@@ -1,0 +1,10 @@
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  background-color: lightblue;
+  padding: 0.2rem;
+}
+
+a:hover {
+  color: rgb(126, 16, 148);
+}

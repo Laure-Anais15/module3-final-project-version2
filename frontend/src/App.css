@@ -7,4 +7,7 @@
   background-color: rgb(147, 161, 202);
 }
 
-
+a {
+  color: rgb(20, 10, 80);
+  text-decoration: none;
+}

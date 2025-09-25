@@ -16,8 +16,8 @@ export default function Home() {
   return (
     <div>
       <div>
-        <h1>Welcome to MyItems</h1>
-        <p>Use the menu to see, add or manage your items.</p>
+        <h1>Welcome to MyBooks</h1>
+        <p>Use the menu to see, add or manage your books.</p>
       </div>
       <button onClick={testConnection}>Check connection</button>
       {status && <p>Status: {status}</p>}
