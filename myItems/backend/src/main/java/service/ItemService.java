@@ -5,7 +5,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.*;
 import org.springframework.stereotype.Service;
 import repository.ItemRepository;
-
+import java.util.List;
 import java.util.Optional;
 
 @Service
@@ -39,4 +39,12 @@ public class ItemService {
     }
 
     public void delete(Long id) { itemRepository.deleteById(id); }
+
+    public List<CustomItem> getItems(String search) {
+        if (search == null || search.isEmpty()) {
+            return itemRepository.findAll();
+        } else {
+            return itemRepository.searchByTitleOrTags(search);
+        }
+    }
 }
