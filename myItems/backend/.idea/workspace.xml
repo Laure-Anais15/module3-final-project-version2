@@ -4,9 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="cdfa557e-dde5-4947-9770-19bad7fc4c70" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/../frontend/.env.example" beforeDir="false" />
-    </list>
+    <list default="true" id="cdfa557e-dde5-4947-9770-19bad7fc4c70" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
