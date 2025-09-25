@@ -5,14 +5,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="cdfa557e-dde5-4947-9770-19bad7fc4c70" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/../../frontend/src/components/ItemEdit.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/../../frontend/src/components/ItemEdit.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../frontend/src/components/ItemForm.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/../../frontend/src/components/ItemForm.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../frontend/src/components/ItemList.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/../../frontend/src/components/ItemList.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../frontend/src/components/NavBar.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/../../frontend/src/components/NavBar.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/MyItemsApp.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/MyItemsApp.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/controller/ItemController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controller/ItemController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/model/CustomItem.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/model/CustomItem.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/repository/ItemRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/repository/ItemRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/service/ItemService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/service/ItemService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../frontend/.env.example" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
