@@ -1,21 +1,33 @@
 import { useState } from "react";
+import { useParams, useNavigate } from "react-router-dom";
 
 export default function ItemForm() {
   const [title, setTitle] = useState("");
   const [description, setDescription] = useState("");
+  const [tags, setTags] = useState("");
+  //const navigate = useNavigate();
 
   const handleSubmit = (e) => {
     e.preventDefault();
+    const newItem = {
+      title,
+      description,
+      tags: tags
+        .split(",")
+        .map((t) => t.trim())
+        .filter((t) => t !== ""),
+    };
 
     fetch("http://localhost:8080/api/items", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({ title, description }),
+      body: JSON.stringify(newItem),
     })
       .then((res) => res.json())
       .then(() => {
         setTitle("");
         setDescription("");
+        setTags("");
         alert("Item added!");
       })
       .catch((err) => console.error("Error :", err));
@@ -23,10 +35,10 @@ export default function ItemForm() {
 
   return (
     <div>
-      <h2>Add an Item</h2>
+      <h2>Add an item</h2>
       <form onSubmit={handleSubmit}>
         <div>
-          <label>Titre : </label>
+          <label>Title : </label>
           <input
             value={title}
             onChange={(e) => setTitle(e.target.value)}
@@ -34,10 +46,19 @@ export default function ItemForm() {
           />
         </div>
         <div>
-          <label>Description : </label>
+          <label>Description (optional): </label>
           <input
             value={description}
             onChange={(e) => setDescription(e.target.value)}
+          />
+        </div>
+        <div>
+          <label>Tags (separated by a comma): </label>
+          <input
+            value={tags}
+            onChange={(e) => setTags(e.target.value)}
+            required
+            placeholder="e.g. science, programming, biology"
           />
         </div>
         <button type="submit">Add</button>

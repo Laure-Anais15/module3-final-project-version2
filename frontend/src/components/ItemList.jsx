@@ -7,7 +7,10 @@ export default function ItemList() {
   useEffect(() => {
     fetch("http://localhost:8080/api/items")
       .then((res) => res.json())
-      .then((data) => setItems(data))
+      .then((data) => {
+        setItems(data.data);
+        setMeta(data.meta);
+      })
       .catch((err) => console.error("Error :", err));
   }, []);
 

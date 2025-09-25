@@ -1,14 +1,15 @@
 const API_URL = "http://localhost:8080/api";
 
 export async function checkHealth() {
-  const res = await fetch(`${API_URL}/health`);
+  const res = await fetch(`http://localhost:8080/api/health`);
+  console.log(res)
   return res.json();
 }
 
 export async function getItems(search = "", page = 1, pageSize = 5) {
   const url = `${API_URL}/items?search=${search}&page=${page}&pageSize=${pageSize}`;
   const res = await fetch(url);
-  if (!res.ok) throw new Error("Erreur lors du chargement des items");
+  if (!res.ok) throw new Error("Error while loading items");
   return res.json();
 }
 
