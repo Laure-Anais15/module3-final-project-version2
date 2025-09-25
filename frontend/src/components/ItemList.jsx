@@ -49,19 +49,7 @@ export default function ItemList() {
         <ul>
           {filteredItems.map((item) => (
             <li key={item.id}>
-              <Link to={`/items/${item.id}`}>{item.title}</Link> –{" "}
-              {item.description}
-              {item.tags && item.tags.length > 0 && (
-                <span
-                  style={{
-                    marginLeft: "10px",
-                    fontStyle: "italic",
-                    color: "gray",
-                  }}
-                >
-                  Tags: {item.tags.join(", ")}
-                </span>
-              )}
+              <Link to={`/items/${item.id}`}>{item.title}</Link> – {item.description}
             </li>
           ))}
         </ul>

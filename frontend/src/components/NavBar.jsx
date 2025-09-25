@@ -9,10 +9,10 @@ export default function NavBar() {
           <Link to="/">Home</Link>
         </li>
         <li>
-          <Link to="/items">Items List</Link>
+          <Link to="/items">Book List</Link>
         </li>
         <li>
-          <Link to="/items/new">Add an Item</Link>
+          <Link to="/items/new">Add a Book</Link>
         </li>
       </ul>
     </nav>

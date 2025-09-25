@@ -5,8 +5,6 @@ export default function ItemForm() {
   const [title, setTitle] = useState("");
   const [description, setDescription] = useState("");
   const [tags, setTags] = useState("");
-  //const navigate = useNavigate();
-  const [author, setAuthor] = useState("");
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -39,18 +37,10 @@ export default function ItemForm() {
       <h2>Add a Book</h2>
       <form onSubmit={handleSubmit}>
         <div>
-          <label>Book title : </label>
+          <label>Title : </label>
           <input
             value={title}
             onChange={(e) => setTitle(e.target.value)}
-            required
-          />
-        </div>
-        <div>
-          <label>Author : </label>
-          <input
-            value={author}
-            onChange={(e) => setAuthor(e.target.value)}
             required
           />
         </div>
